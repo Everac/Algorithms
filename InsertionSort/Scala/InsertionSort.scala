@@ -23,8 +23,17 @@ class InsertionSort() {
 	*/
 
 	def insertSort(array: Array[Int]): Array[Int] = {
-		for () {
-
+		for (j <- 1 until array.length) {
+			// Save key for later use 
+			var key = array(j)
+			// Get precedent index
+			var i = j - 1
+			while (i >= 0 && array(i) > key) {
+				// Move precedent element forward	
+				array(i + 1) = array(i)
+				i = i - 1
+			}
+			array(i + 1) = key
 		}
 
 		return array
