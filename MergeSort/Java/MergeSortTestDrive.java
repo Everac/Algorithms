@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class InsertionSortTestDrive {
+public class MergeSortTestDrive {
 	public static void main(String[] args) {
 
 		int[] unsortedArray = new int[] {10, 7, 3, 9, 3, -5};
@@ -9,15 +9,14 @@ public class InsertionSortTestDrive {
 		int[] arrayInGoodOrder = new int[] { -5, 3, 3, 7, 9, 10};
 		System.out.println("Sorted Array is " + Arrays.toString(arrayInGoodOrder));	
 
-		// Note: InsertionSort is a static method so we can call it without creating an object first
-		int[] sortedArray = InsertionSort.insertSort(unsortedArray);
+		int[] sortedArray = MergeSort.mergeSort(unsortedArray);
 		System.out.println("Sorted Array is " + Arrays.toString(sortedArray));
 
 		// Check if Array is in good order
 		// We do not use 'arrayA == arrayB' because it is like saying:
 		// Is it the same array ?
 		if (Arrays.equals(arrayInGoodOrder, sortedArray)) {
-			System.out.println("Insertion Sort Algorithm works!!!");
+			System.out.println("Merge Sort Algorithm works!!!");
 		}
 	
 	}
